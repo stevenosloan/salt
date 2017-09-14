@@ -7,13 +7,13 @@ class Configuration
     const BUILT_INS = [
         "less" => [
             "extensions"  => ["less", "css"],
-            "block_open"  => "/** doc",
-            "block_close" => "*/",
+            "block_open"  => "^\/\*\*\sdoc\s*",
+            "block_close" => "^\*\/\s*",
         ],
         "sass" => [
             "extensions"  => ["sass", "scss", "css"],
-            "block_open"  => "/** doc",
-            "block_close" => "*/",
+            "block_open"  => "^\/\*\*\sdoc\s*",
+            "block_close" => "^\*\/\s*",
         ],
     ];
 
