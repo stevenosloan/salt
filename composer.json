@@ -4,8 +4,7 @@
     "homepage": "https://githb.com/stevenosloan/salt",
     "type": "library",
     "require": {
-        "symfony/yaml": "^3.3",
-        "strscan/strscan": "^1.0"
+        "symfony/yaml": "^3.3"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
