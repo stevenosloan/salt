@@ -6,16 +6,23 @@ class Collection
 {
 
     /**
+     * The directory files should be read out of
+     *
      * @var string
      */
     public $source_directory;
 
     /**
+     * Array of directory => [documents] read out of
+     * the source directory
+     *
      * @var array
      */
     public $file_tree;
 
     /**
+     * Configuration used to read the source_directory
+     *
      * @var Configuration
      */
     public $config;
@@ -32,7 +39,16 @@ class Collection
     }
 
     /**
-     * @return Document[]
+     * Read the source_directory and generate the $file_tree.
+     *
+     * This file_tree takes the format of:
+     *
+     *     [
+     *         "root"   => [  array of Document generated from files at "/" ],
+     *         "subdir" => [ array of Document generated from files at /subdir/* ],
+     *     ]
+     *
+     * @return array
      */
     public function generateFileTree()
     {

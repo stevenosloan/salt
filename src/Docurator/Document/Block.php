@@ -13,7 +13,7 @@ class Block
 
     private $buffer = [];
 
-    public function __construct (\SplFileInfo $file_info)
+    public function __construct(\SplFileInfo $file_info)
     {
         $this->file_info = $file_info;
     }

@@ -34,14 +34,14 @@ class CollectionTest extends TestCase
         return rmdir($dir);
     }
 
-    function test_construct_throws_if_given_missing_directory()
+    public function test_construct_throws_if_given_missing_directory()
     {
         $this->expectException(\InvalidArgumentException::class);
 
         new Collection("hodor", Configuration::builtIn("less"));
     }
 
-    function test_generateFileTree_returns_array_of_path_to_matching_files()
+    public function test_generateFileTree_returns_array_of_path_to_matching_files()
     {
         $fixture_files = [
             "cat_a/one.ext",
@@ -71,12 +71,12 @@ class CollectionTest extends TestCase
             ],
             array_keys($file_tree),
             "Categories should match, an empty dir should be root",
-            $delta = 0.0,
-            $maxDepth = 1,
-            $canonicalize = true
+            /* delta */ 0.0,
+            /* max depth */ 1,
+            /* canonicalize */ true
         );
 
-        /** we should only match files that ext matches */
+        /* we should only match files that ext matches */
         $this->assertEquals(2, count($file_tree["cat_a"]));
         $this->assertEquals(1, count($file_tree["cat_a/b"]));
         $this->assertEquals(1, count($file_tree["root"]));
