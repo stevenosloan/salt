@@ -4,11 +4,13 @@ namespace Tests\Docurator;
 
 use Docurator\Collection;
 use Docurator\Configuration;
+
+use Tests\Util;
 use PHPUnit_Framework_TestCase as TestCase;
 
 class CollectionTest extends TestCase
 {
-    function setUp()
+    public function setUp()
     {
         mkdir("tmp");
         mkdir("tmp/cat_a");
@@ -16,22 +18,9 @@ class CollectionTest extends TestCase
         mkdir("tmp/cat_b");
     }
 
-    function tearDown()
+    public function tearDown()
     {
-        $this->delTree("tmp");
-    }
-
-    function delTree($dir)
-    {
-        $files = array_diff(scandir($dir), array(".", ".."));
-        foreach ($files as $file) {
-            if (is_dir("{$dir}/{$file}")) {
-                $this->delTree("{$dir}/{$file}");
-            } else {
-                unlink("{$dir}/{$file}");
-            }
-        }
-        return rmdir($dir);
+        Util::delTree("tmp");
     }
 
     public function test_construct_throws_if_given_missing_directory()
