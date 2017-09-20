@@ -1,6 +1,6 @@
 <?php
 
-namespace Docurator\Document;
+namespace Salt\Document;
 
 use Symfony\Component\Yaml\Yaml;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Docurator;
+namespace Tests\Salt;
 
-use Docurator\Configuration;
-use Docurator\Document;
+use Salt\Configuration;
+use Salt\Document;
 
 use Tests\Util;
 use PHPUnit_Framework_TestCase as TestCase;

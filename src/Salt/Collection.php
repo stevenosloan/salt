@@ -1,6 +1,6 @@
 <?php
 
-namespace Docurator;
+namespace Salt;
 
 class Collection
 {

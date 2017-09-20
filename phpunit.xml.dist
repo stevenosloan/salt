@@ -6,7 +6,7 @@
          beStrictAboutChangesToGlobalState="true"
          bootstrap="vendor/autoload.php" >
     <testsuites>
-        <testsuite name="Docurator Test Suite">
+        <testsuite name="Salt Test Suite">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>

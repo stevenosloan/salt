@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Docurator;
+namespace Tests\Salt;
 
-use Docurator\Configuration;
+use Salt\Configuration;
 use PHPUnit_Framework_TestCase as TestCase;
 
 class ConfigurationTest extends TestCase
