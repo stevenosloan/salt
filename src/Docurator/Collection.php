@@ -66,7 +66,7 @@ class Collection
                 $file_tree[$relative_path] = [];
             }
 
-            $file_tree[$relative_path][] = new Document($this->config, $relative_path, $file_info);
+            $file_tree[$relative_path][] = new Document($this->config, $file_info);
         }
 
         return $file_tree;

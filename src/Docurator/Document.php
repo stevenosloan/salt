@@ -5,14 +5,12 @@ namespace Docurator;
 class Document
 {
     public $config;
-    public $relative_path;
     public $file_info;
     public $blocks = [];
 
-    public function __construct(Configuration $config, $relative_path, \SplFileInfo $file_info)
+    public function __construct(Configuration $config, \SplFileInfo $file_info)
     {
         $this->config        = $config;
-        $this->relative_path = $relative_path;
         $this->file_info     = $file_info;
         $this->scan();
     }
