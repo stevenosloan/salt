@@ -1,7 +1,7 @@
 {
-    "name": "stevensloan/salt",
+    "name": "stevenosloan/salt",
     "description": "Abstract documentation generator",
-    "homepage": "https://githb.com/stevenosloan/salt",
+    "homepage": "https://github.com/stevenosloan/salt",
     "type": "library",
     "require": {
         "symfony/yaml": "~3.0"
